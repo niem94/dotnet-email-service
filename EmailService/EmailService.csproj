@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <OutputType>Library</OutputType>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <PackageId>NidamTech</PackageId>
+    <PackageId>EmailService</PackageId>
     <Version>1.0.0</Version>
-    <Authors>niem94</Authors>
-    <Company>NidamTech</Company>
+    <Authors>Nikolai E. Damm</Authors>
     <PackageDescription>A collection of providers with an easy api for sending mails.</PackageDescription>
     <RepositoryUrl>https://github.com/niem94/dotnet-email-service</RepositoryUrl>
   </PropertyGroup>
