@@ -1,7 +1,7 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
 
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,visualstudio,rider,macos,csharp,jetbrains+all
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,visualstudio,rider,macos,csharp,jetbrains+all
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudio,rider,macos,jetbrains+all,csharp
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,rider,macos,jetbrains+all,csharp
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -454,7 +454,7 @@ modules.xml
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -519,19 +519,6 @@ Temporary Items
 # Editor-based Rest Client
 
 # Android studio 3.1+ serialized cache file
-
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
 
 ### VisualStudio ###
 
@@ -691,7 +678,7 @@ Temporary Items
 
 # Ionide (cross platform F# VS Code tools) working folder
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,visualstudio,rider,macos,csharp,jetbrains+all
+# End of https://www.toptal.com/developers/gitignore/api/visualstudio,rider,macos,jetbrains+all,csharp
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
