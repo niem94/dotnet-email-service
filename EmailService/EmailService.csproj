@@ -3,7 +3,7 @@
     <OutputType>Library</OutputType>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>NidamTech.EmailService</PackageId>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Authors>Nikolai E. Damm</Authors>
     <PackageDescription>A collection of providers with an easy api for sending mails.</PackageDescription>
     <RepositoryUrl>https://github.com/niem94/dotnet-email-service</RepositoryUrl>
@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="SendGrid" Version="9.21.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.9" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.9" />
     </ItemGroup>
 

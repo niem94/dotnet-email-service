@@ -1,15 +1,14 @@
-using System;
 using Microsoft.Extensions.DependencyInjection;
-using SendGrid.Helpers.Mail;
+using Microsoft.Extensions.Configuration;
 
 namespace EmailService
 {
     public static class ServiceCollectionExtensions
     {
         public static void AddEmailService(this IServiceCollection services,
-            Action<MailSettings> mailSection)
+            IConfigurationSection mailSettings)
         {
-            services.Configure(mailSection);
+            services.Configure<EmailSettings>(mailSettings);
             services.AddTransient<IEmailService, EmailService>();
         }
     }
