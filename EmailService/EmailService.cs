@@ -1,13 +1,14 @@
 using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
 
 namespace EmailService
 {
-    public abstract class EmailService<TEmailSettings> : IEmailService where TEmailSettings : EmailSettings
+    public abstract class EmailService<TEmailSettings> : IEmailService where TEmailSettings : EmailSettings, new()
     {
         public TEmailSettings Settings { get; set; }
-        protected EmailService(TEmailSettings settings)
+        protected EmailService(IOptions<TEmailSettings> options)
         {
-            Settings = settings;
+            Settings = options.Value;
         }
 
         public abstract Task SendEmailAsync(string email, string subject, string message, bool isHtml);

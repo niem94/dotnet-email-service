@@ -1,5 +1,6 @@
 using System.Net.Mail;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
 
 namespace EmailService.Providers.Smtp
 {
@@ -7,11 +8,11 @@ namespace EmailService.Providers.Smtp
     {
         public SmtpClient SmtpClient { get; set; }
         public MailMessage MailMessage { get; set; }
-        protected SmtpEmailService(SmtpEmailSettings settings) : base(settings)
+
+        protected SmtpEmailService(IOptions<SmtpEmailSettings> options) : base(options)
         {
             SmtpClient = new SmtpClient(Settings.Host, Settings.Port);
         }
-
         public override async Task SendEmailAsync(string email, string subject, string message, bool isHtml)
         {
             MailMessage = new MailMessage();

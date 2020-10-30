@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using EmailService;
+using Microsoft.Extensions.Options;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 
@@ -7,10 +8,11 @@ namespace EmailService.Providers.SendGrid
 {
     public class SendGridEmailService : EmailService<SendGridEmailSettings>
     {
+
         public SendGridClient SendGridClient { get; set; }
         public SendGridMessage SendGridMessage { get; set; }
 
-        protected SendGridEmailService(SendGridEmailSettings settings) : base(settings)
+        protected SendGridEmailService(IOptions<SendGridEmailSettings> options) : base(options)
         {
             SendGridClient = new SendGridClient(Settings.ApiKey);
             SendGridMessage = new SendGridMessage();
