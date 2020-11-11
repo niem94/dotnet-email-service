@@ -1,20 +1,20 @@
 using System.Net.Mail;
 
-namespace EmailService.Models
+namespace EmailService
 {
     public class EmailMessage
     {
-        public EmailMessage(string subject, string body, string fromAdress, string toAddress, bool isHtml)
+        public EmailMessage(string subject, string body, string fromAddress, string toAddress, bool isHtml)
         {
             Subject = subject;
             Body = body;
-            FromAdress = fromAdress;
+            FromAddress = fromAddress;
             ToAddress = toAddress;
             IsHtml = isHtml;
         }
         public string Subject { get; set; } = "";
         public string Body { get; set; } = "";
-        public string FromAdress { get; set; } = "";
+        public string FromAddress { get; set; } = "";
         public string FromName { get; set; } = "";
         public string ToAddress { get; set; } = "";
         public string ToName { get; set; } = "";
