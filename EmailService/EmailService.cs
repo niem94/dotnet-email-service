@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 
 namespace EmailService
 {
-    public abstract class EmailService<TOptions> where TOptions : ProviderOptions
+    public abstract class EmailService<TOptions> : IEmailService where TOptions : ProviderOptions
     {
         public TOptions Options { get; set; }
         protected EmailService(IOptions<TOptions> options)
