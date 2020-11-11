@@ -5,7 +5,7 @@ namespace EmailService
 {
     public abstract class EmailService<TOptions> where TOptions : ProviderOptions
     {
-        public ProviderOptions Options { get; set; }
+        public TOptions Options { get; set; }
         protected EmailService(IOptions<TOptions> options)
         {
             Options = options.Value;
